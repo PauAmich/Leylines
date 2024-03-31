@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b7wa2t1fmoaau"]
+[gd_scene load_steps=30 format=3 uid="uid://b7wa2t1fmoaau"]
 
 [ext_resource type="Script" path="res://Scripts/player_character.gd" id="1_vvu0q"]
 [ext_resource type="Texture2D" uid="uid://w7onlpd55anr" path="res://Assets/playerSprites_ [version 1.0]/mPlayer_ [dwarf].png" id="2_45bkk"]
@@ -216,14 +216,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="PlayerCharacter" type="Node2D" node_paths=PackedStringArray("spriteSheet")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_we4mh"]
+size = Vector2(11, 7)
+
+[node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("spriteSheet")]
+y_sort_enabled = true
 scale = Vector2(2, 2)
+collision_layer = 2
 script = ExtResource("1_vvu0q")
 health = 10
-speed = 100
+speed = 200
 spriteSheet = NodePath("PlayerSprite")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(174, 57)
+position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_a7oai")
 animation = &"Idle"
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_we4mh")
+debug_color = Color(0.992157, 0, 0.247059, 0.360784)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+y_sort_enabled = true
