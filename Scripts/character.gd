@@ -12,8 +12,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+#	pass
 	
 func move_character(direction,speed,delta):
 	var collision = move_and_collide(velocity*speed*delta);

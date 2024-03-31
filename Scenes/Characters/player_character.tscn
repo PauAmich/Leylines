@@ -241,3 +241,4 @@ debug_color = Color(0.992157, 0, 0.247059, 0.360784)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 y_sort_enabled = true
+position_smoothing_enabled = true

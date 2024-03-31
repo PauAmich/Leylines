@@ -7,13 +7,8 @@ func _ready():
 
 
 func _on_start_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Levels/Lancaster/featherdown.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Levels/Lancaster/player_home.tscn")
 	pass
-
-func _on_debug_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Levels/Gnomium/gnomium.tscn")
-	pass
-	
 
 func _on_load_button_pressed():
 	pass
