@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0sgo5rwu4qa" path="res://Assets/forestVillage_ [version 2.0]/interior_/interiorObjects_.png" id="2_a207j"]
 [ext_resource type="Texture2D" uid="uid://bvttm7oknol8s" path="res://Assets/forestVillage_ [version 2.0]/interior_/tableObjects_.png" id="3_lgjma"]
 [ext_resource type="Script" path="res://Scenes/Levels/Lancaster/PlayerHomeDoor.gd" id="4_lf8ti"]
-[ext_resource type="PackedScene" uid="uid://b7wa2t1fmoaau" path="res://Scenes/Characters/PlayerCharacter/player_character.tscn" id="4_vlqpf"]
+[ext_resource type="PackedScene" uid="uid://b7wa2t1fmoaau" path="res://Scenes/Characters/player_character.tscn" id="4_vlqpf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5fxjv"]
 texture = ExtResource("1_jjvai")
@@ -849,30 +849,6 @@ texture = ExtResource("2_a207j")
 17:10/0 = 0
 17:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:10/0/physics_layer_0/angular_velocity = 0.0
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.96308, -2.66585, 8, -2.80616, 8, -8, -5.54216, -8)
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.52554, -8, -2.80616)
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, -1.824, -8, -1.54339)
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 6.384, 8, 6.384, -1.40308, -8, -1.54339)
-3:1/0 = 0
-3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:1/0/physics_layer_0/angular_velocity = 0.0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.80493, -8, 6.80493, -2.94646, -8, -2.94646)
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.98092, 8, 8, 8, 8, -1.824, -4.98092, -1.68369)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddke1"]
 texture = ExtResource("3_lgjma")
@@ -1165,15 +1141,13 @@ layer_1/name = "Room"
 layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array(-393218, 589824, 6, -458750, 589824, 2, -458749, 655360, 2, -524286, 720896, 1, -524285, 786432, 1, -589822, 720896, 0, -589821, 786432, 0, -393214, 589824, 3, -393213, 655360, 3, -327682, 589824, 7, -327681, 655360, 7, -458752, 720896, 6, -393216, 720896, 7, -393217, 655360, 6, -458754, 589824, 5, -458753, 655360, 5, -524288, 720896, 5, -524289, 655360, 4, -589824, 720896, 4, -524290, 589824, 4)
 layer_2/name = "Decorations"
-layer_2/tile_data = PackedInt32Array(-262150, 65537, 1, -327686, 65537, 0, -327685, 196609, 0, -262149, 196609, 1)
+layer_2/tile_data = PackedInt32Array()
 
 [node name="Entrance" type="Area2D" parent="."]
 position = Vector2(-17, 138)
-collision_mask = 2
 script = ExtResource("4_lf8ti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance"]
-y_sort_enabled = true
 position = Vector2(1, 10)
 shape = SubResource("RectangleShape2D_p5i46")
 debug_color = Color(0.176471, 0.643137, 0, 0.533333)

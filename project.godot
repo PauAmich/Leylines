@@ -11,14 +11,19 @@ config_version=5
 [application]
 
 config/name="Leylines"
-run/main_scene="res://Scenes/Characters/player_character.tscn"
+config/version="0.1"
+run/main_scene="res://Scenes/Menus/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.png"
+
+[autoload]
+
+SceneLoader="*res://Scripts/scene_loader.gd"
 
 [display]
 
 window/size/viewport_width=800
-window/size/viewport_height=640
+window/size/viewport_height=600
 
 [input]
 
@@ -59,6 +64,13 @@ Interact={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Triggers"
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
