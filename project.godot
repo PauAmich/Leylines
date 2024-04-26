@@ -12,18 +12,19 @@ config_version=5
 
 config/name="Leylines"
 config/version="0.1"
-run/main_scene="res://Scenes/Menus/MainMenu/main_menu.tscn"
+run/main_scene="res://scenes/menus/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://Assets/icon.png"
+config/icon="res://Assets/images/game_icon.png"
 
 [autoload]
 
-SceneLoader="*res://Scripts/scene_loader.gd"
+General="*res://scripts/general.gd"
 
 [display]
 
 window/size/viewport_width=800
-window/size/viewport_height=600
+window/size/viewport_height=640
+window/size/resizable=false
 
 [input]
 
