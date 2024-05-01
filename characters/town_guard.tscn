@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://oqxvuh75cp7b"]
+
+[ext_resource type="Script" path="res://scripts/characters/town_guard.gd" id="1_nc4u5"]
+[ext_resource type="Texture2D" uid="uid://bwo71focuq38c" path="res://Assets/images/sprites/townGuard.png" id="2_c2kab"]
+[ext_resource type="Texture2D" uid="uid://d0vmo346uydqj" path="res://Assets/images/misc/dialogIndicator.png" id="3_jmhxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaiod"]
+atlas = ExtResource("2_c2kab")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bhht"]
+atlas = ExtResource("2_c2kab")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypmjp"]
+atlas = ExtResource("2_c2kab")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6a36"]
+atlas = ExtResource("2_c2kab")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oe0qr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaiod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bhht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypmjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6a36")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctydy"]
+size = Vector2(10, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnljp"]
+size = Vector2(10, 10)
+
+[node name="TownGuard" type="CharacterBody2D" node_paths=PackedStringArray("bodySpriteSheet")]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_nc4u5")
+bodySpriteSheet = NodePath("Body")
+
+[node name="Body" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oe0qr")
+animation = &"Idle"
+frame_progress = 0.225356
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_ctydy")
+debug_color = Color(0, 0.701961, 0.482353, 0.419608)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="InteractDialog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(9, -5)
+scale = Vector2(0.291667, 0.375)
+texture = ExtResource("3_jmhxv")
+
+[node name="InteractBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractBox"]
+position = Vector2(10, 6)
+shape = SubResource("RectangleShape2D_nnljp")
+debug_color = Color(0, 0, 1, 0.419608)
+
+[connection signal="body_entered" from="InteractBox" to="." method="_on_interact_box_entered"]

@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=9 format=3 uid="uid://bgyn0pio0ydrq"]
 
-[ext_resource type="Texture2D" uid="uid://cd4r4cg6d3nps" path="res://assets/images/tiles/books_.png" id="1_imb3w"]
-[ext_resource type="Texture2D" uid="uid://c1us1i2u2n8fa" path="res://assets/images/tiles/interiorObjects_.png" id="2_y5uwj"]
-[ext_resource type="Texture2D" uid="uid://dcvj6teytui5k" path="res://assets/images/tiles/interior_.png" id="3_2vvdf"]
-[ext_resource type="Texture2D" uid="uid://buhnkrl7yl1jk" path="res://assets/images/tiles/tableObjects_.png" id="4_65jn7"]
+[ext_resource type="Texture2D" uid="uid://cd4r4cg6d3nps" path="res://Assets/images/tiles/books_.png" id="1_imb3w"]
+[ext_resource type="Texture2D" uid="uid://c1us1i2u2n8fa" path="res://Assets/images/tiles/interiorObjects_.png" id="2_y5uwj"]
+[ext_resource type="Texture2D" uid="uid://dcvj6teytui5k" path="res://Assets/images/tiles/interior_.png" id="3_2vvdf"]
+[ext_resource type="Texture2D" uid="uid://buhnkrl7yl1jk" path="res://Assets/images/tiles/tableObjects_.png" id="4_65jn7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkhdo"]
 texture = ExtResource("1_imb3w")

@@ -7,7 +7,8 @@ func _ready():
 	match General.last_scene:
 		"main_menu":
 			p.position = Vector2(200,100)
-		"featherdown":
+			spawn_wizard()
+		"town_featherdown":
 			p.position = Vector2(200,210)
 	add_child(p)
 	General.last_scene = "player_house"
@@ -23,3 +24,10 @@ func _on_door_entered(body):
 	if body.name == "MainCharacter":
 		get_tree().change_scene_to_file("scenes/lancaster/featherdown/town_featherdown.tscn");
 	pass # Replace with function body.
+
+
+func spawn_wizard():
+	var w = preload("res://characters/wizard.tscn").instantiate();
+	w.position = Vector2(200,210);
+	add_child(w)
+	

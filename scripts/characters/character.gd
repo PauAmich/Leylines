@@ -10,10 +10,11 @@ class_name AnimatedCharacter
 @export var bodySpriteSheet : AnimatedSprite2D
 #@export var handSpriteSheet : AnimatedSprite2D
 var bodyAnimation = "Idle"
+var overrideAnimation = false # Used in case we need to override an animation
 #var handAnimation = "Idle"
 
 # El "ready" es definirà a cada script propi
-func _ready():
+func _ready(): 
 	pass
 
 
@@ -37,4 +38,5 @@ func animate_character(direction):
 	if(direction.x > 0):
 		bodySpriteSheet.flip_h = false;
 	
-	bodySpriteSheet.play(bodyAnimation)
+	if(!overrideAnimation):
+		bodySpriteSheet.play(bodyAnimation)

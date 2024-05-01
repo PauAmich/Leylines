@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://h8bd8t87dhkd"]
 
-[ext_resource type="TileSet" uid="uid://bgyn0pio0ydrq" path="res://assets/tilesets/indoors.tres" id="1_m82ow"]
+[ext_resource type="TileSet" uid="uid://bgyn0pio0ydrq" path="res://Assets/tilesets/indoors.tres" id="1_m82ow"]
 [ext_resource type="Script" path="res://scripts/levels/player_house.gd" id="2_5crk4"]
 [ext_resource type="PackedScene" uid="uid://cn3hijmjvjvu6" path="res://characters/main_character.tscn" id="3_1atha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mphec"]
-size = Vector2(32, 16)
+size = Vector2(19, 16)
 
 [node name="PlayerHouse" type="TileMap"]
 scale = Vector2(2, 2)

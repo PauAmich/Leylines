@@ -6,7 +6,7 @@ func _ready():
 	var p = player.instantiate()
 	match General.last_scene:
 		"town_featherdown":
-			p.position = Vector2(1250,3000)
+			p.position = Vector2(300,2880)
 		_:
 			p.position = Vector2(200,400)
 	add_child(p)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://14fih1vhlfbp"]
+[gd_scene load_steps=3 format=3 uid="uid://14fih1vhlfbp"]
 
-[ext_resource type="TileSet" uid="uid://bel1v8epjdcvk" path="res://assets/tilesets/lancaster.tres" id="1_gnbl6"]
+[ext_resource type="TileSet" uid="uid://bel1v8epjdcvk" path="res://Assets/tilesets/lancaster.tres" id="1_gnbl6"]
+[ext_resource type="PackedScene" uid="uid://oqxvuh75cp7b" path="res://characters/town_guard.tscn" id="2_gm41e"]
 
 [node name="Bellflame" type="TileMap"]
 y_sort_enabled = true
@@ -18,3 +19,10 @@ layer_2/name = "TallObjects"
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(2031703, 524298, 7, 2097239, 524298, 8, 2031704, 589834, 7, 2097240, 589834, 8, 2031705, 655370, 7, 2097241, 655370, 8, 3538987, 720906, 8, 3473452, 786442, 7, 3538988, 786442, 8, 3473453, 851978, 7, 3538989, 851978, 8)
 metadata/_edit_group_ = true
+
+[node name="TownGuard2" parent="." node_paths=PackedStringArray("bodySpriteSheet") instance=ExtResource("2_gm41e")]
+position = Vector2(249.5, 677)
+bodySpriteSheet = NodePath("../TownGuard/Body")
+
+[node name="TownGuard" parent="." instance=ExtResource("2_gm41e")]
+position = Vector2(249, 695.5)

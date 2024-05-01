@@ -9,11 +9,11 @@ func _ready():
 			p.position = Vector2(837,755)
 			
 		"overworld_east":
-			p.position = Vector2(1250,800);			
+			p.position = Vector2(1460,850);			
 		_:
 			p.position = Vector2(200,400)
 	add_child(p)
-	General.last_scene = "featherdown"
+	General.last_scene = "town_featherdown"
 	pass # Replace with function body.
 
 

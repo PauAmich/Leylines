@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n1v658kru6uf"
-path="res://.godot/imported/courtWizard.png-0318b0d8a9fe28657a381599cd47d76e.ctex"
+uid="uid://bw2dlb1s0qvo"
+path="res://.godot/imported/forest_ [bridgeAnimatedTiles].png-135893dd6c8909baca6ebeb3717087b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/sprites/courtWizard.png"
-dest_files=["res://.godot/imported/courtWizard.png-0318b0d8a9fe28657a381599cd47d76e.ctex"]
+source_file="res://Assets/images/tiles/forest_ [bridgeAnimatedTiles].png"
+dest_files=["res://.godot/imported/forest_ [bridgeAnimatedTiles].png-135893dd6c8909baca6ebeb3717087b4.ctex"]
 
 [params]
 
