@@ -1,28 +1,31 @@
 extends AnimatedCharacter
 class_name Wizard
 
+var interactable = false;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# Spawn using the "appear" animation
-	overrideAnimation = true;
+	# Reprodueix "appear" (tarda 1 segon), passa a "idle"
 	bodySpriteSheet.play("Appear")
-	overrideAnimation = false;
-	pass # Replace with function body.
+	await get_tree().create_timer(1).timeout
+	bodySpriteSheet.play("Idle")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	var direction = Input.get_vector("Left","Right","Up","Down").normalized();
-	move_character(direction,speed,delta);
-	animate_character(direction)
-	pass
+	if(interactable):
+		get_node("InteractDialog").show()
+		if(Input.is_action_just_pressed("Interact")):
+			print("INTERACTABLE")
+		
+	else:
+		get_node("InteractDialog").hide()
+	
 
 func _on_interact_box_entered(body):
-	print("ENTERED")
 	if body.name == "MainCharacter":
-		get_node("InteractDialog").show()
-	pass # Replace with function body.
+		interactable = true
 
 func _on_interact_box_exited(body):
-	get_node("InteractDialog").hide()
+	interactable = false;
 	pass # Replace with function body.

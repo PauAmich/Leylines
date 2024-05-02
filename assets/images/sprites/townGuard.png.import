@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwo71focuq38c"
-path="res://.godot/imported/townGuard.png-e513589c89b7c03f42c92eb86bb495ce.ctex"
+path="res://.godot/imported/townGuard.png-d1564daa7adf1bd113c784cc460b33de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/sprites/townGuard.png"
-dest_files=["res://.godot/imported/townGuard.png-e513589c89b7c03f42c92eb86bb495ce.ctex"]
+source_file="res://assets/images/sprites/townGuard.png"
+dest_files=["res://.godot/imported/townGuard.png-d1564daa7adf1bd113c784cc460b33de.ctex"]
 
 [params]
 

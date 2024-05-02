@@ -1,10 +1,6 @@
-[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://byd5fma1n4an4"]
+[gd_resource type="SpriteFrames" load_steps=22 format=3 uid="uid://byd5fma1n4an4"]
 
-[ext_resource type="Texture2D" uid="uid://d2gl83xa8am72" path="res://Assets/images/sprites/playerCharacter.png" id="1_qde56"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ylrsg"]
-atlas = ExtResource("1_qde56")
-region = Rect2(96, 288, 32, 32)
+[ext_resource type="Texture2D" uid="uid://d2gl83xa8am72" path="res://assets/images/sprites/playerCharacter.png" id="1_qde56"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a5l5w"]
 atlas = ExtResource("1_qde56")
@@ -90,14 +86,6 @@ region = Rect2(224, 64, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ylrsg")
-}],
-"loop": true,
-"name": &"Dead",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_a5l5w")
 }, {
 "duration": 1.0,
@@ -109,8 +97,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5ev7n")
 }],
-"loop": true,
-"name": &"Dying",
+"loop": false,
+"name": &"Dead",
 "speed": 5.0
 }, {
 "frames": [{

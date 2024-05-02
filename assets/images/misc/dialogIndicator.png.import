@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0vmo346uydqj"
-path="res://.godot/imported/dialogIndicator.png-5f10daa667150998bb46b5a35d72409a.ctex"
+path="res://.godot/imported/dialogIndicator.png-3303719d82bae89b763f79b15e17eb16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/misc/dialogIndicator.png"
-dest_files=["res://.godot/imported/dialogIndicator.png-5f10daa667150998bb46b5a35d72409a.ctex"]
+source_file="res://assets/images/misc/dialogIndicator.png"
+dest_files=["res://.godot/imported/dialogIndicator.png-3303719d82bae89b763f79b15e17eb16.ctex"]
 
 [params]
 

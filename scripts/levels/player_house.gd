@@ -28,6 +28,6 @@ func _on_door_entered(body):
 
 func spawn_wizard():
 	var w = preload("res://characters/wizard.tscn").instantiate();
-	w.position = Vector2(200,210);
+	w.position = Vector2(200,230);
 	add_child(w)
 	

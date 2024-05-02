@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://be4hrbr1jwjq7"]
+
+[ext_resource type="PackedScene" uid="uid://r0u0jyut8mm7" path="res://scenes/menus/main_menu.tscn" id="1_dse6k"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Scene" type="Node2D" parent="."]
+
+[node name="MainMenu" parent="Scene" instance=ExtResource("1_dse6k")]
+
+[node name="TopBar" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="TopBar"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BG" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(800, 640)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Transitions" type="AnimationPlayer" parent="."]

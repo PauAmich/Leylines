@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://h8bd8t87dhkd"]
 
-[ext_resource type="TileSet" uid="uid://bgyn0pio0ydrq" path="res://Assets/tilesets/indoors.tres" id="1_m82ow"]
+[ext_resource type="TileSet" uid="uid://bgyn0pio0ydrq" path="res://assets/tilesets/indoors.tres" id="1_m82ow"]
 [ext_resource type="Script" path="res://scripts/levels/player_house.gd" id="2_5crk4"]
 [ext_resource type="PackedScene" uid="uid://cn3hijmjvjvu6" path="res://characters/main_character.tscn" id="3_1atha"]
 
@@ -20,7 +20,7 @@ player = ExtResource("3_1atha")
 metadata/_edit_group_ = true
 
 [node name="PlayerHouseDoor" type="Area2D" parent="."]
-position = Vector2(4, -1.5)
+position = Vector2(4, 2.5)
 collision_mask = 2
 
 [node name="Hitbox" type="CollisionShape2D" parent="PlayerHouseDoor"]
